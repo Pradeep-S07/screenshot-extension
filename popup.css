@@ -1,0 +1,267 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    background: #f8fafc;
+    width: 380px;
+    min-height: 200px;
+}
+
+/* Container */
+.container {
+    padding: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #4f8fd4 0%, #3b7bc4 100%);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Capture section */
+.capture-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.capture-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #4f8fd4 0%, #3b7bc4 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(79, 143, 212, 0.3);
+}
+
+.capture-btn:hover {
+    background: linear-gradient(135deg, #3b7bc4 0%, #2d6bb4 100%);
+    box-shadow: 0 4px 8px rgba(79, 143, 212, 0.4);
+    transform: translateY(-1px);
+}
+
+.capture-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(79, 143, 212, 0.3);
+}
+
+.capture-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Preview section */
+.preview-section {
+    padding: 0 20px 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0 12px;
+}
+
+.preview-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 6px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.preview-container {
+    position: relative;
+    background: #f8fafc;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 200px;
+}
+
+.preview-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* Actions section */
+.actions-section {
+    padding: 0 20px 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding-top: 16px;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 8px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #374151;
+}
+
+.action-btn:hover {
+    border-color: #4f8fd4;
+    color: #4f8fd4;
+    background: #f8fafc;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+.download-btn:hover {
+    border-color: #10b981;
+    color: #10b981;
+}
+
+.copy-btn:hover {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+
+.open-tab-btn:hover {
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+}
+
+/* Status section */
+.status-section {
+    padding: 0 20px 20px;
+    min-height: 20px;
+}
+
+.status-message {
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.status-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.status-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.status-message.info {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #93c5fd;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    body {
+        width: 320px;
+    }
+    
+    .actions-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    
+    .action-btn {
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px 16px;
+    }
+}
+
